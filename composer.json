@@ -10,6 +10,9 @@
             "homepage": "http://sistemas.cekurte.com/"
         }
     ],
+    "require": {
+        "cekurte/componentbundle": "dev-master"
+    },
     "require-dev": {
         "mptre/php-soundcloud": "*"
     },
