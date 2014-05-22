@@ -10,7 +10,7 @@
             "homepage": "http://sistemas.cekurte.com/"
         }
     ],
-    "require": {
+    "require-dev": {
         "mptre/php-soundcloud": "dev-master"
     },
     "repositories": [
