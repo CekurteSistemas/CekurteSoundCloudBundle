@@ -11,25 +11,9 @@
         }
     ],
     "require": {
-        "cekurte/componentbundle": "dev-master"
+        "cekurte/componentbundle": "dev-master",
+        "cekurte/php-soundcloud": "dev-master"
     },
-    "require-dev": {
-        "mptre/php-soundcloud": "*"
-    },
-    "repositories": [
-        {
-            "type": "package",
-            "package": {
-                "name": "mptre/php-soundcloud",
-                "version": "2.3.2",
-                "source": {
-                    "url": "https://github.com/mptre/php-soundcloud.git",
-                    "type": "git",
-                    "reference": "v2.3.2"
-                }
-            }
-        }
-    ],
     "autoload": {
         "psr-0": { "Cekurte\\SoundCloudBundle": "" }
     },
