@@ -11,18 +11,18 @@
         }
     ],
     "require-dev": {
-        "mptre/php-soundcloud": "dev-master"
+        "mptre/php-soundcloud": "*"
     },
     "repositories": [
         {
             "type": "package",
             "package": {
                 "name": "mptre/php-soundcloud",
-                "version": "dev-master",
+                "version": "2.3.2",
                 "source": {
                     "url": "https://github.com/mptre/php-soundcloud.git",
                     "type": "git",
-                    "reference": "master"
+                    "reference": "v2.3.2"
                 }
             }
         }
