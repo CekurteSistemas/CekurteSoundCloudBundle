@@ -15,8 +15,16 @@
     },
     "repositories": [
         {
-            "type": "vcs",
-            "url": "https://github.com/mptre/php-soundcloud"
+            "type": "package",
+            "package": {
+                "name": "mptre/php-soundcloud",
+                "version": "dev-master",
+                "source": {
+                    "url": "https://github.com/mptre/php-soundcloud.git",
+                    "type": "git",
+                    "reference": "master"
+                }
+            }
         }
     ],
     "autoload": {
