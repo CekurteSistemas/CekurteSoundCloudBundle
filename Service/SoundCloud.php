@@ -55,8 +55,26 @@ class SoundCloud extends ContainerAware
         return $this;
     }
 
-    public function uploadTrack()
+    public function uploadTrack($title, $file)
     {
-        var_dump($this->getClient());
+        $track = array(
+            'track[title]'      => $title,
+            'track[tags]'       => 'exemplo teste',
+            'track[asset_data]' => '@' . $file
+        );
+
+        try {
+
+            $response = $this->getClient()->getAuthorizeUrl(array('scope'=>'non-expiring'));
+
+            // $response = $this->getClient()->post('tracks', $track);
+
+            echo '<a href="' . $response . '">Teste</a>';
+
+        } catch (\Soundcloud\Exception\InvalidHttpResponseCodeException $e) {
+            var_dump($e);
+        }
+
+        exit;
     }
 }
