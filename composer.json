@@ -11,8 +11,8 @@
         }
     ],
     "require": {
-        "cekurte/componentbundle": "dev-master",
-        "cekurte/php-soundcloud": "dev-master"
+        "cekurte/componentbundle": "1.0.*@dev",
+        "ise/php-soundcloud": "3.*"
     },
     "autoload": {
         "psr-0": { "Cekurte\\SoundCloudBundle": "" }
