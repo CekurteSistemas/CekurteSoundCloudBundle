@@ -4,6 +4,8 @@ namespace Cekurte\SoundCloudBundle\Service;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 use Cekurte\ComponentBundle\Util\ContainerAware;
+use Symfony\Component\DependencyInjection\ContainerInterface;
+use \Soundcloud\Service as SoundCloudService;
 
 /**
  * Conecta o serviço ao SoundCloud
@@ -26,16 +28,15 @@ class SoundCloud extends ContainerAware
      */
     public function __construct(ContainerInterface $container, $clientId, $clientSecret)
     {
-        $this
-            ->setContainer($container)
-            ->setClient(new \Services_Soundcloud($clientId, $clientSecret))
-        ;
+        $this->setContainer($container);
+
+        $this->setClient(new SoundCloudService($clientId, $clientSecret));
     }
 
     /**
      * Get a client
      *
-     * @return \Services_Soundcloud
+     * @return SoundCloudService
      */
     protected function getClient()
     {
@@ -45,9 +46,9 @@ class SoundCloud extends ContainerAware
     /**
      * Set a client
      *
-     * @param \Services_Soundcloud $client
+     * @param SoundCloudService $client
      */
-    protected function setClient(\Services_Soundcloud $client)
+    protected function setClient(SoundCloudService $client)
     {
         $this->client = $client;
 
